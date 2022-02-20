@@ -32,7 +32,7 @@
     },
     {
       "type": "Control",
-      "scope": "#/___data"
+      "scope": "#/___listUsers"
     }
   ]
 }

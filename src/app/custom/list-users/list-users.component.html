@@ -1,0 +1,14 @@
+<h1 *ngIf="(users$ | async)">List of Users</h1>
+<mat-accordion *ngIf="(users$ | async)">
+    <mat-expansion-panel *ngFor="let user of (users$ | async)">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{user.email}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{user.name}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <h3>{{user.username}}</h3>
+    </mat-expansion-panel>
+</mat-accordion>
