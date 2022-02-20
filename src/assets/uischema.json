@@ -2,8 +2,21 @@
   "type": "VerticalLayout",
   "elements": [
     {
+      "type":"Control",
+      "scope":"#/properties/status"
+    },
+    {
       "type": "Control",
-      "scope": "#/properties/name"
+      "scope": "#/properties/name",
+      "rule":{
+        "effect": "SHOW",
+        "condition":{
+          "schema":{
+            "const":"Show"
+          },
+          "scope": "#/properties/status"
+        }
+      }
     },
 
     {

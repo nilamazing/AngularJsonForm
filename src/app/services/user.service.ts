@@ -8,7 +8,6 @@ import { IUser } from "../Entities/User";
 export class UsersService{
 
      users:IUser[]=[];
-
      constructor(private httpClient:HttpClient){}
 
      getUsersList():Observable<IUser[]>{

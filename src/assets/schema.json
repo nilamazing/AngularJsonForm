@@ -1,5 +1,12 @@
 {
   "properties": {
+    "status":{
+      "type": "string",
+      "enum": [
+        "Show",
+        "Hide"
+      ]
+    },
     "name": {
       "type": "string"
     },
