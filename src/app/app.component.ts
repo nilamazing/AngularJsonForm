@@ -3,6 +3,8 @@ import { angularMaterialRenderers } from '@jsonforms/angular-material';
 import * as uischemaAsset from '../assets/uischema.json';
 import * as schemaAsset from '../assets/schema.json';
 import dataAsset from './data';
+import { CustomComponent } from './custom/data.component';
+import { and, isControl, rankWith, scopeEndsWith } from '@jsonforms/core';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +17,10 @@ export class AppComponent {
   schema = schemaAsset;
   data=dataAsset;
   renderers = [
-    ...angularMaterialRenderers
+    ...angularMaterialRenderers,
+    {
+      renderer: CustomComponent,
+      tester: rankWith(5, and(isControl,scopeEndsWith('__data')))
+    }
   ]
 }

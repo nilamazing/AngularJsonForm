@@ -1,0 +1,36 @@
+{
+    "definitions": {
+        "order": {
+            "type": "object",
+            "properties": {
+                "customer": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "department": {
+                            "type": "string"
+                        },
+                        "emailAddress": {
+                            "type": "string",
+                            "format": "email"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "type": "object",
+    "properties":{
+        "orders":{
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/order"
+            }
+        }
+    }
+}

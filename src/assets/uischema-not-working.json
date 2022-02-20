@@ -1,0 +1,13 @@
+{
+    "type": "Categorization",
+    "label": "Orders",
+    "elements": [
+        {
+            "type": "ListWithDetail",
+            "scope": "#/properties/orders",
+            "options": {
+                "labelRef": "#/items/properties/customer/properties/name"
+            }
+        }
+    ]
+}

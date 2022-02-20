@@ -5,13 +5,14 @@
       "type": "Control",
       "scope": "#/properties/name"
     },
+
     {
       "type": "Control",
       "scope": "#/properties/comments",
       "options": {
         "elementLabelProp": "name",
         "detail": {
-          "type": "VerticalLayout",
+          "type": "HorizontalLayout",
           "elements": [
             {
               "type": "Control",
@@ -28,6 +29,10 @@
           ]
         }
       }
+    },
+    {
+      "type": "Control",
+      "scope": "#/___data"
     }
   ]
 }
